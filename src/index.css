@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --color-canvas: #f2f1ed;
+  --color-panel: #f7f6f2;
+  --color-card: #fdfdfb;
+  --color-ink: #0c1730;
+  --color-muted: #6b7385;
+
+  --color-brand-50: #eef4ff;
+  --color-brand-100: #dbe7ff;
+  --color-brand-300: #8ab3f8;
+  --color-brand-400: #5b93f1;
+  --color-brand-500: #3478ea;
+  --color-brand-600: #1f5fd6;
+  --color-brand-700: #1648ac;
+  --color-brand-800: #0f3680;
+  --color-brand-900: #0a2757;
+  --color-brand-950: #071a3d;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  letter-spacing: -0.02em;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Diagonal-stripe fill used by the inactive chart bars */
+.hatch {
+  background-color: #fff;
+  background-image: repeating-linear-gradient(
+    135deg,
+    transparent 0 4px,
+    #9aa1b0 4px 5.5px
+  );
+  border: 1.5px solid #9aa1b0;
+}
+
+/* Concentric rings on the app-download card */
+.rings {
+  background-image: repeating-radial-gradient(
+    circle at 85% 110%,
+    transparent 0 14px,
+    rgb(255 255 255 / 0.07) 14px 15px
+  );
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brand-500);
+  outline-offset: 2px;
+}
